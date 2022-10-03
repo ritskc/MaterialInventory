@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { LoginserviceService  } from 'src/app/service/loginservice.service';
 import { LoginModel } from 'src/app/model/login.model';
 import { Observable } from 'rxjs';
+import { FormControl, Validators } from '@angular/forms';
+
+
 
 
 @Component({
@@ -12,8 +15,11 @@ import { Observable } from 'rxjs';
 export class LoginComponent implements OnInit {
 public login$:Observable<LoginModel>;
 public loginString:string;
+email = new FormControl('', [Validators.required, Validators.email]);
+hide = true; 
 
-  constructor(private loginService:LoginserviceService) { 
+  constructor(private loginService:LoginserviceService) {
+    
     this.login$ = new Observable<LoginModel>();
     this.loginString="";
   }
@@ -24,6 +30,7 @@ public loginString:string;
 
  
   doLogin(userName: string,password:string) {
+   
     if (userName&&password) {
       this.login$=this.loginService.authenticate(userName,password);    
     this.login$.subscribe(
