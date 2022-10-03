@@ -23,8 +23,7 @@ public login: LoginModel;
         'Content-Type':  'application/json'       
       })
     };
-
-       return this.http.post<LoginModel>('https://questapi.yellow-chips.com//users/authenticate',this.login,httpOptions);    
+    return this.http.post<LoginModel>('https://questapi.yellow-chips.com//users/authenticate',this.login,httpOptions);  
   }
   
 }

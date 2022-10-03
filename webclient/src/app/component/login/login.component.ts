@@ -11,23 +11,25 @@ import { Observable } from 'rxjs';
 })
 export class LoginComponent implements OnInit {
 public login$:Observable<LoginModel>;
+public loginString:string;
 
   constructor(private loginService:LoginserviceService) { 
     this.login$ = new Observable<LoginModel>();
+    this.loginString="";
   }
   
   ngOnInit(): void {    
    
   }
 
-  onClickMe() {
-    alert('a');
-  }
-
+ 
   doLogin(userName: string,password:string) {
     if (userName&&password) {
-    this.login$=this.loginService.authenticate(userName,password);    
-    this.login$.subscribe(data=>alert(data.token));
+      this.login$=this.loginService.authenticate(userName,password);    
+    this.login$.subscribe(
+      data=>this.loginString="success",
+      err => this.loginString="Invalid username / password"
+      );
     }
   }
 
