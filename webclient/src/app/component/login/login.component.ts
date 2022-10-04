@@ -13,7 +13,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class LoginComponent implements OnInit {
 public login$:Observable<LoginModel>;
-public loginString:string;
+
 email = new FormControl('', [Validators.required, Validators.email]);
 hide = true; 
 
@@ -23,7 +23,8 @@ loginSuccess = new EventEmitter()
   constructor(private loginService:LoginserviceService,private _snackBar: MatSnackBar) {
     
     this.login$ = new Observable<LoginModel>();
-    this.loginString="";
+    
+    
   }
   
   ngOnInit(): void {    
@@ -36,7 +37,7 @@ loginSuccess = new EventEmitter()
     if (userName&&password) {
       this.login$=this.loginService.authenticate(userName,password);    
     this.login$.subscribe(
-      data=>{console.log(data);this.loginSuccess.emit()},
+      data=>{console.log(data);this.storeData(data);this.loginSuccess.emit()},
       
       err => this._snackBar.open("Invalid username/password", "",{        
         verticalPosition: 'bottom' ,
@@ -45,6 +46,12 @@ loginSuccess = new EventEmitter()
       })
       );
     }
+  }
+
+  storeData(loginData:LoginModel){
+    localStorage.setItem('token',loginData.token);
+    localStorage.setItem('username',loginData.firstName+ " " + loginData.lastName);    
+    
   }
 
 }
