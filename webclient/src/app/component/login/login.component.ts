@@ -17,6 +17,7 @@ public loginString:string;
 email = new FormControl('', [Validators.required, Validators.email]);
 hide = true; 
 
+@Output()
 loginSuccess = new EventEmitter()
 
   constructor(private loginService:LoginserviceService,private _snackBar: MatSnackBar) {
