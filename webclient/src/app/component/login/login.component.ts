@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { LoginserviceService  } from 'src/app/service/loginservice.service';
 import { LoginModel } from 'src/app/model/login.model';
 import { Observable } from 'rxjs';
@@ -17,6 +17,8 @@ public loginString:string;
 email = new FormControl('', [Validators.required, Validators.email]);
 hide = true; 
 
+loginSuccess = new EventEmitter()
+
   constructor(private loginService:LoginserviceService,private _snackBar: MatSnackBar) {
     
     this.login$ = new Observable<LoginModel>();
@@ -33,10 +35,8 @@ hide = true;
     if (userName&&password) {
       this.login$=this.loginService.authenticate(userName,password);    
     this.login$.subscribe(
-      data=>this._snackBar.open("Success" ,"", {
-        duration: 3000,
-        verticalPosition:"bottom"       
-      }),
+      data=>{console.log(data);this.loginSuccess.emit()},
+      
       err => this._snackBar.open("Invalid username/password", "",{        
         verticalPosition: 'bottom' ,
         panelClass: ['red-snackbar'],

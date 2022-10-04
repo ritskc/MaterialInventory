@@ -1,2 +1,4 @@
-<app-login></app-login>
-<app-main></app-main>
+  
+<app-login (loginSuccess)="OnLoginSuccess()" *ngIf="showLogin"></app-login>
+<app-main *ngIf="showMain"></app-main>
+

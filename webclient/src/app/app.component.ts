@@ -7,6 +7,18 @@ import { LoginComponent } from './component/login/login.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'webclient';
+export class AppComponent { 
+  
+  showLogin = true;
+  showMain = false;
+ 
+
+  OnLoginSuccess(){    
+    this.toggle();
+  }
+
+  toggle() {
+    this.showLogin = false;
+    this.showMain = true;  
+}
 }
