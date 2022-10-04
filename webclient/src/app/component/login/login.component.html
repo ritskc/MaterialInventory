@@ -1,14 +1,15 @@
-
-<mat-card>Login
+<div class="main-div">
+<mat-card>
+    <mat-card-title>Login</mat-card-title>
 <div class="example-container">
 
     <mat-form-field appearance="fill">
         <mat-label>Enter username</mat-label>
-        <input matInput #userName>
+        <input matInput class="mat-input" #userName>
       </mat-form-field>
 <br>
     <mat-form-field appearance="fill">
-      <mat-label>Enter your password</mat-label>
+      <mat-label>Enter your password</mat-label>      
       <input matInput [type]="hide ? 'password' : 'text'" #password>
       <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -19,8 +20,8 @@
 
 <section>
     
-    <div class="example-button-row">      
-      <button mat-raised-button color="primary" (click)="doLogin(userName.value,password.value)">Login</button>      
+    <div class="example-button-row" align="end">      
+      <button mat-raised-button color="primary" (click)="doLogin(userName.value,password.value)" >Login</button>      
     </div>
   </section>
    
@@ -31,6 +32,7 @@
 <br>
 
 </mat-card>
+</div>
 
 
 

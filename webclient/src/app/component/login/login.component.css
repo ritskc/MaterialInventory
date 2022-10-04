@@ -34,7 +34,7 @@
   
   .example-button-row {
     display: table-cell;
-    width: 490px;
+    width: 490px;    
   }
   
   .example-button-row .mat-button-base {
@@ -54,8 +54,35 @@
   }
 
   .main-div{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
+width: 30%;
+padding: 10px;
+margin-top: 10%;
   }
+
+  .mat-card {
+    width: 260px;
+  }
+
+ 
+  .mat-form-field{
+    width:250px !important;
+    
+ }
+
+ .red-snackbar{
+  position: absolute !important;
+  top: 54px;
+}
+
+.green-snackbar{
+  background-color:green;
+  color:lightgoldenrodyellow;
+  
+}
+
+.mat-snack-bar-container {
+  margin-top: 50px !important;
+  background-color: important rgb(153, 50, 50) !important;
+  color:lightgoldenrodyellow !important;
+ }

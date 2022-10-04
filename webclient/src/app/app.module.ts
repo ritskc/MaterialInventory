@@ -12,11 +12,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon'
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MainComponent } from './component/main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent    
+    LoginComponent,
+    MainComponent    
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import {MatCardModule} from '@angular/material/card';
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
