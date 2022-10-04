@@ -28,7 +28,10 @@ loginSuccess = new EventEmitter()
   }
   
   ngOnInit(): void {    
-   
+    const token = localStorage.getItem("token");
+    if (token) {
+      this.loginSuccess.emit();
+    }
   }
 
  
@@ -37,7 +40,7 @@ loginSuccess = new EventEmitter()
     if (userName&&password) {
       this.login$=this.loginService.authenticate(userName,password);    
     this.login$.subscribe(
-      data=>{console.log(data);this.storeData(data);this.loginSuccess.emit()},
+      data=>{this.storeData(data);this.loginSuccess.emit();},
       
       err => this._snackBar.open("Invalid username/password", "",{        
         verticalPosition: 'bottom' ,
