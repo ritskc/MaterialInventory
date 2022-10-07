@@ -86,3 +86,10 @@ margin-top: 10%;
   background-color: important rgb(153, 50, 50) !important;
   color:lightgoldenrodyellow !important;
  }
+
+ .example-container {
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid #555;
+}

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {  AfterViewInit, Component, EventEmitter,  Output } from '@angular/core';
 import { LoginserviceService  } from 'src/app/service/loginservice.service';
 import { LoginModel } from 'src/app/model/login.model';
 import { Observable } from 'rxjs';
@@ -11,7 +11,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements AfterViewInit {
 public login$:Observable<LoginModel>;
 
 email = new FormControl('', [Validators.required, Validators.email]);
@@ -22,19 +22,17 @@ loginSuccess = new EventEmitter()
 
   constructor(private loginService:LoginserviceService,private _snackBar: MatSnackBar) {
     
-    this.login$ = new Observable<LoginModel>();
-    
+    this.login$ = new Observable<LoginModel>();   
     
   }
-  
-  ngOnInit(): void {    
+  ngAfterViewInit(): void {
     const token = localStorage.getItem("token");
     if (token) {
       this.loginSuccess.emit();
-    }
+    }  
   }
-
- 
+  
+   
   doLogin(userName: string,password:string) {
    
     if (userName&&password) {

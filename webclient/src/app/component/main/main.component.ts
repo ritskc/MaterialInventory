@@ -6,15 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  public userName:string;
+  userName = "";
+  shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
   constructor() { 
-    this.userName = "";    
+     
   }
 
   ngOnInit(): void {
     const nameDetail = localStorage.getItem("username");
     if (nameDetail) {
-      this.userName = nameDetail;
+      this.userName = nameDetail;      
     }
 
   }

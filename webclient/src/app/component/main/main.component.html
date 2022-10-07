@@ -1,1 +1,24 @@
 <p>Name: {{userName}}</p>
+<br>
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav>
+    <mat-nav-list (click)="sidenav.close()">
+      <a mat-list-item routerLink="supplier/supplierlist">
+        <mat-icon aria-hidden="false" fontIcon="group"></mat-icon>
+        <span>Supplier</span>
+      </a>
+      <a mat-list-item routerLink="/Customer">
+        <mat-icon aria-hidden="false" fontIcon="wc"></mat-icon>        
+        <span>Customer</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+<button mat-icon-button (click)="sidenav.open()"> 
+<mat-icon>menu</mat-icon>
+</button>
+  </mat-toolbar>
+</mat-sidenav-container>
+  
+  
