@@ -5,7 +5,7 @@ import { SupplierlistComponent } from './supplier/supplierlist/supplierlist.comp
 import { SupplierComponent } from './supplier/supplier/supplier.component';
 
 const routes: Routes = [
-  {path : 'supplier/supplierlist' , component: SupplierlistComponent},
+  {path : 'Supplier' , component: SupplierlistComponent},
   {path : 'Customer' , component: CustomerlistComponent},  
 ];
 
