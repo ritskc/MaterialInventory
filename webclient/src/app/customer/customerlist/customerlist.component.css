@@ -1,0 +1,57 @@
+.container-panel{
+    width: 90%;
+    height: 80%;
+        
+    border: 1px solid rgb(63, 81, 181);
+}
+
+   .search-bar{
+    background-color:aqua;    
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;    
+    width: 80%;
+}
+.example-form{
+    background: #ffffff;
+    outline: none;
+    border-style: none;    
+    font-size: 1.2rem;
+    width: 90%;
+}
+.example-full-width{
+    width: 90%;
+    margin-left: 10%;
+}
+
+.topheader{
+    margin: 1%; 
+    position: relative;
+    float: right; 
+    width: 90%;
+    border: 1px solid rgb(63, 81, 181);
+}
+
+.main-div{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-header-cell{
+min-width: 60px;
+padding: 10px;
+word-wrap:normal;
+font-weight: bold;
+color: black;
+}
+
+.mat-cell{
+min-width: 60px;
+padding: 10px;
+word-wrap:normal;
+
+height: auto;
+}

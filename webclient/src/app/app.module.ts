@@ -20,7 +20,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { CustomerlistComponent } from './customer/customerlist/customerlist.component';
 import { SupplierlistComponent } from './supplier/supplierlist/supplierlist.component';
-import { SupplierComponent } from './supplier/supplier/supplier.component'; 
+import { SupplierComponent } from './supplier/supplier/supplier.component';
+import { AddsupplierComponent } from './supplier/addsupplier/addsupplier.component'; 
+import {MatTableModule} from '@angular/material/table'; 
+import { MatPaginatorModule } from '@angular/material/paginator';
+
+
 
 @NgModule({
   declarations: [
@@ -29,7 +34,7 @@ import { SupplierComponent } from './supplier/supplier/supplier.component';
     MainComponent,
     CustomerlistComponent,
     SupplierlistComponent,    
-    SupplierComponent    
+    SupplierComponent, AddsupplierComponent    
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,9 @@ import { SupplierComponent } from './supplier/supplier/supplier.component';
     MatSidenavModule,
     MatSelectModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatTableModule, 
+    MatPaginatorModule   
   ],
   providers: [],
   bootstrap: [AppComponent]

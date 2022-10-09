@@ -1,0 +1,12 @@
+.container-panel{
+    width: 90%;
+    height: 80%;
+        
+    border: 1px solid rgb(63, 81, 181);
+}
+
+.topheader{
+    margin: 1%; 
+    position: relative;
+    float: right; 
+}
