@@ -7,6 +7,8 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
 import { NgTemplateOutlet } from '@angular/common';
 import {MatPaginator} from '@angular/material/paginator';
+import {MatSort, Sort} from '@angular/material/sort';
+import {LiveAnnouncer} from '@angular/cdk/a11y';
 
 
 @Component({
@@ -23,8 +25,10 @@ export class CustomerlistComponent implements AfterViewInit {
   
 
   @ViewChild(MatPaginator) paginator :any = MatPaginator;  
+  @ViewChild(MatSort) sort:any =MatSort;
+
   
-  constructor(private customerService:CustomerService,private _snackBar: MatSnackBar) { 
+  constructor(private customerService:CustomerService,private _snackBar: MatSnackBar,private _liveAnnouncer: LiveAnnouncer) { 
     
   }
   ngAfterViewInit(): void {
@@ -35,6 +39,7 @@ export class CustomerlistComponent implements AfterViewInit {
         console.log(data);
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
+        this.dataSource.sort=this.sort;
       },
       
       err => this._snackBar.open("Data loading issue", "",{        
@@ -44,5 +49,16 @@ export class CustomerlistComponent implements AfterViewInit {
       })
       );
   }
+  /** Announce the change in sort state for assistive technology. */
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
+
+  
 
 }

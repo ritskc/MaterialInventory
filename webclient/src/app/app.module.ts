@@ -24,6 +24,7 @@ import { SupplierComponent } from './supplier/supplier/supplier.component';
 import { AddsupplierComponent } from './supplier/addsupplier/addsupplier.component'; 
 import {MatTableModule} from '@angular/material/table'; 
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -54,7 +55,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatToolbarModule,
     MatListModule,
     MatTableModule, 
-    MatPaginatorModule   
+    MatPaginatorModule,
+    MatSortModule   
   ],
   providers: [],
   bootstrap: [AppComponent]
