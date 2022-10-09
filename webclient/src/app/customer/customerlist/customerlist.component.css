@@ -30,17 +30,24 @@
     width: 90%;
     border: 1px solid rgb(63, 81, 181);
 }
+.controlseperator{
+    min-width: 20px;
+}
 
-.main-div{
-    position: absolute;
-    margin-top: 1%;
-    margin-left: 5%;
-    align-items: center;
-    justify-content: center;
+.mat-table{     
+    position: relative;
+    margin-left: 20%;
+    
+}
+
+.mat-paginator{
+    position: relative;
+    margin-right: 5%;
 }
 
 .mat-header-cell{
-min-width: 60px;
+min-width: 150px;
+max-width: 150px;
 padding: 5px;
 word-wrap:normal;
 color: white;
@@ -48,7 +55,7 @@ background-color:rgb(63, 81, 181);
 }
 
 .mat-cell{
-min-width: 60px;
+
 padding: 5px;
 word-wrap:normal;
 }

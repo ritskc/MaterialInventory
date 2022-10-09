@@ -7,9 +7,29 @@
                   (keyup)="applyFilter($event)"          
            />
           </mat-form-field>
+          <div class="controlseperator">
+
+          </div>       
+        <button mat-mini-fab routerLink="/addsupplier">
+            <mat-icon>print</mat-icon>
+        </button>
+<div class="controlseperator">
+
+</div>
+        <button mat-mini-fab routerLink="/addsupplier">
+          <mat-icon>import_export</mat-icon>
+      </button> 
+      
+      <div class="controlseperator">
+
+      </div>
         <button mat-mini-fab routerLink="/addsupplier">
             <mat-icon>person_add</mat-icon>
         </button>
+
+        <div class="controlseperator">
+
+        </div>
     </mat-toolbar>    
     
     <div class="main-div">
@@ -27,27 +47,27 @@
         </ng-container>
 
         <ng-container matColumnDef="addressLine1" >
-            <th mat-header-cell *matHeaderCellDef> Address </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
             <td mat-cell *matCellDef="let element"> {{element.addressLine1}} </td>
           </ng-container>
 
         <ng-container matColumnDef="city" >
-            <th mat-header-cell *matHeaderCellDef> City </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
             <td mat-cell *matCellDef="let element"> {{element.city}} </td>
           </ng-container>
 
           <ng-container matColumnDef="state" >
-            <th mat-header-cell *matHeaderCellDef> State </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> State </th>
             <td mat-cell *matCellDef="let element"> {{element.state}} </td>
           </ng-container>
 
           <ng-container matColumnDef="emailAddress" >
-            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
             <td mat-cell *matCellDef="let element"> {{element.emailAddress}} </td>
           </ng-container>
 
           <ng-container matColumnDef="telephoneNumber" >
-            <th mat-header-cell *matHeaderCellDef> Telephone </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Telephone </th>
             <td mat-cell *matCellDef="let element"> {{element.telephoneNumber}} </td>
           </ng-container>
 
