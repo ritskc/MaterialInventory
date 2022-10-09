@@ -19,11 +19,10 @@ export class CustomerlistComponent implements AfterViewInit {
   public customers: Observable<Customer[]>= new Observable<Customer[]>();;
   displayColumns=['name','addressLine1','emailAddress','telephoneNumber'];
   
-  dataSource = new MatTableDataSource<Observable<Customer[]>>();
+  dataSource = new MatTableDataSource<Customer>();
   
 
-  @ViewChild(MatPaginator) paginator :any = MatPaginator;
-  
+  @ViewChild(MatPaginator) paginator :any = MatPaginator;  
   
   constructor(private customerService:CustomerService,private _snackBar: MatSnackBar) { 
     
@@ -32,7 +31,11 @@ export class CustomerlistComponent implements AfterViewInit {
     setTimeout(() => this.dataSource.paginator = this.paginator);
     this.customers=this.customerService.getAll();    
     this.customers.subscribe(
-      data=>{console.log(data);},
+      data=>{
+        console.log(data);
+        this.dataSource.data = data;
+        this.dataSource.paginator = this.paginator;
+      },
       
       err => this._snackBar.open("Data loading issue", "",{        
         verticalPosition: 'bottom' ,

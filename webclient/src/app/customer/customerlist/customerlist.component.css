@@ -1,7 +1,6 @@
 .container-panel{
     width: 90%;
-    height: 80%;
-        
+    height: 90%;        
     border: 1px solid rgb(63, 81, 181);
 }
 
@@ -34,7 +33,7 @@
 
 .main-div{
     position: absolute;
-    margin-top: 5%;
+    margin-top: 1%;
     margin-left: 5%;
     align-items: center;
     justify-content: center;
@@ -42,16 +41,15 @@
 
 .mat-header-cell{
 min-width: 60px;
-padding: 10px;
+padding: 5px;
 word-wrap:normal;
 font-weight: bold;
-color: black;
+color: white;
+background-color:rgb(63, 81, 181);
 }
 
 .mat-cell{
 min-width: 60px;
-padding: 10px;
+padding: 5px;
 word-wrap:normal;
-
-height: auto;
 }
