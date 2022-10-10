@@ -19,7 +19,7 @@ import {LiveAnnouncer} from '@angular/cdk/a11y';
 
 export class CustomerlistComponent implements AfterViewInit {
   public customers: Observable<Customer[]>= new Observable<Customer[]>();;
-  displayColumns=['name','addressLine1','emailAddress','telephoneNumber'];
+  displayColumns=['name','addressLine1','emailAddress','telephoneNumber','action'];
   
   dataSource = new MatTableDataSource<Customer>();
   

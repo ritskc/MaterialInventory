@@ -14,19 +14,21 @@
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-toolbar color="primary">
-<button mat-icon-button (click)="sidenav.open()"> 
-<mat-icon>menu</mat-icon>
-</button>
-<a mat-button>
-<mat-icon>settings</mat-icon>
-Settings
-</a>
-<a mat-button>
-  <mat-icon>person_add</mat-icon>
-  Logout
-  </a>
-  </mat-toolbar>
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.open()"> 
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="toolbarright">
+    <a mat-button>
+    <mat-icon>settings</mat-icon>
+    Settings
+    </a>
+    <a mat-button>
+      <mat-icon>account_circle</mat-icon>
+      Logout
+      </a>
+    </div>
+</mat-toolbar>
 
   <router-outlet></router-outlet>
 </mat-sidenav-container>
