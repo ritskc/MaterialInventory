@@ -24,4 +24,16 @@ export class CustomerService {
 
     return this.http.get<Customer[]>('https://localhost:44390/customers/1',httpOptions);  
 }
+
+addNew (customer:Customer)
+  {   
+    
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'       
+      })
+    };
+    return this.http.post<any>('https://localhost:44390/customers',customer,httpOptions);  
+    
+  }
 }

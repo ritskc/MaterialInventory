@@ -16,25 +16,25 @@
             <p>
             <mat-form-field appearance="fill">
                 <mat-label>Name</mat-label>
-                <input matInput>
+                <input matInput  [(ngModel)]="customer.name">
             </mat-form-field>
             </p>
             <p>
                 <mat-form-field appearance="fill">
                     <mat-label>Email</mat-label>
-                    <input matInput>
+                    <input matInput [(ngModel)]="customer.emailAddress">
                 </mat-form-field>
             </p>
             <p>
                 <mat-form-field appearance="fill">
                     <mat-label>Phone</mat-label>
-                    <input matInput>
+                    <input matInput [(ngModel)]="customer.telephoneNumber">
                 </mat-form-field>
                 </p>
                 <p>
                     <mat-form-field appearance="fill">
                         <mat-label>Contact</mat-label>
-                        <input matInput>
+                        <input matInput [(ngModel)]="customer.contactPersonName">
                     </mat-form-field>
                 </p>          
         </div>
@@ -46,33 +46,33 @@
             <p>
             <mat-form-field appearance="fill">
                 <mat-label>Address</mat-label>
-                <input matInput>
+                <input matInput [(ngModel)]="customer.addressLine1">
               </mat-form-field>
             </p>
             <p>
                 <mat-form-field appearance="fill">
                     <mat-label>City</mat-label>
-                    <input matInput>
+                    <input matInput [(ngModel)]="customer.city">
                   </mat-form-field>
             </p>
             <p>
                 <mat-form-field appearance="fill">
                     <mat-label>State</mat-label>
-                    <input matInput>
+                    <input matInput [(ngModel)]="customer.state">
                   </mat-form-field>
                 </p>
                 <p>
                     <mat-form-field appearance="fill">
                         <mat-label>Zipcode</mat-label>
-                        <input matInput>
+                        <input matInput [(ngModel)]="customer.zipCode">
                       </mat-form-field>
                 </p>         
             </div>
             <div class="formsubclassrright">
                 <div class="button-group">
                     <div class="button-group-sub">
-                        <button mat-raised-button color="primary">Save</button>  
-                        <button mat-raised-button color="accent">Cancel</button>
+                        <button mat-raised-button color="primary" (click)="addNew()">Save</button>  
+                        <button mat-raised-button color="accent" routerLink="/Customer">Cancel</button>
                     </div>
                 </div>
             </div>
