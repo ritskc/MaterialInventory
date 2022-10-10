@@ -4,11 +4,13 @@ import { CustomerlistComponent } from './customer/customerlist/customerlist.comp
 import { SupplierlistComponent } from './supplier/supplierlist/supplierlist.component';
 import { SupplierComponent } from './supplier/supplier/supplier.component';
 import { AddsupplierComponent } from './supplier/addsupplier/addsupplier.component';
+import { CustomeraddComponent } from './customer/customeradd/customeradd.component';
 
 const routes: Routes = [
   {path : 'Supplier' , component: SupplierlistComponent},
   {path : 'Customer' , component: CustomerlistComponent},
   {path : 'addsupplier' , component: AddsupplierComponent},
+  {path : 'customeradd' , component: CustomeraddComponent},
   {path: '' , component: SupplierlistComponent},  
 ];
 

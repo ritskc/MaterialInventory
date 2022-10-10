@@ -25,6 +25,7 @@ import { AddsupplierComponent } from './supplier/addsupplier/addsupplier.compone
 import {MatTableModule} from '@angular/material/table'; 
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { CustomeraddComponent } from './customer/customeradd/customeradd.component';
 
 
 
@@ -35,7 +36,7 @@ import { MatSortModule } from '@angular/material/sort';
     MainComponent,
     CustomerlistComponent,
     SupplierlistComponent,    
-    SupplierComponent, AddsupplierComponent    
+    SupplierComponent, AddsupplierComponent, CustomeraddComponent    
   ],
   imports: [
     BrowserModule,
