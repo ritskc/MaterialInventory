@@ -6,8 +6,55 @@
 }
 .toptoolbar{
     float: right;
+    width: 100%;    
+}
+
+.formclass{
+    width: 90%;
+    margin: 5%;
+    float: right;
+}
+
+.formsubclassleft{
+    width: 50%;
+    float: left;
+}
+.formsubclassrright{
+    width: 50%;
+    float: right;
 }
 
 .controlseperator{
     min-width: 20px;
 }
+
+.mat-form-field{
+    width: 400px;
+}
+
+.controlseperator{
+    min-width: 20px;
+}
+
+.button-group{
+    width: 400px;    
+    float: left;
+}
+.button-group-sub{
+    float: right;
+}
+.mat-raised-button{
+    margin: 20px;
+}
+.mat-raised-button{
+    width: 100px;
+}
+
+.mat-mini-fab{
+    margin: 10px;
+}
+
+.toptoolbar{
+    margin-left: 50px;   
+}
+
